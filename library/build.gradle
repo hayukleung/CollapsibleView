@@ -1,8 +1,5 @@
 apply plugin: 'com.android.library'
 
-apply from 'maven.gradle'
-apply from 'bintray.gradle'
-
 ext {
   bintrayRepo = 'maven'
   bintrayName = 'CollapsibleView'
@@ -27,8 +24,8 @@ ext {
   allLicenses = ["Apache-2.0"]
 }
 
-apply from 'maven.gradle'
-apply from 'bintray.gradle'
+// apply from 'https://github.com/hayukleung/CollapsibleView/blob/master/library/maven.gradle'
+// apply from 'https://github.com/hayukleung/CollapsibleView/blob/master/library/bintray.gradle'
 
 android {
   compileSdkVersion 25
