@@ -1,5 +1,35 @@
 apply plugin: 'com.android.library'
 
+apply from 'maven.gradle'
+apply from 'bintray.gradle'
+
+ext {
+  bintrayRepo = 'maven'
+  bintrayName = 'CollapsibleView'
+
+  publishedGroupId = 'com.hayukleung.collapsibleview'
+  libraryName = 'CollapsibleView'
+  artifact = 'CollapsibleView'
+
+  libraryDescription = 'An Android Collapsible View Base On RecyclerView.'
+
+  siteUrl = 'https://github.com/hayukleung/CollapsibleView'
+  gitUrl = 'https://github.com/hayukleung/CollapsibleView.git'
+
+  libraryVersion = '1.0.0'
+
+  developerId = 'hayukleung'
+  developerName = 'Hayuk Leung'
+  developerEmail = 'hayukleung@gmail.com'
+
+  licenseName = 'The Apache Software License, Version 2.0'
+  licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+  allLicenses = ["Apache-2.0"]
+}
+
+apply from 'maven.gradle'
+apply from 'bintray.gradle'
+
 android {
   compileSdkVersion 25
   buildToolsVersion "25.0.2"
