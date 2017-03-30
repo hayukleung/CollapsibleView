@@ -9,10 +9,10 @@ if (project.hasProperty("android")) {
     from android.sourceSets.main.java.srcDirs
   }
 
-  task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-  }
+  // task javadoc(type: Javadoc) {
+  // source = android.sourceSets.main.java.srcDirs
+  // classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+  // }
 } else {
   // Java libraries
   task sourcesJar(type: Jar, dependsOn: classes) {
@@ -21,13 +21,13 @@ if (project.hasProperty("android")) {
   }
 }
 
-task javadocJar(type: Jar, dependsOn: javadoc) {
-  classifier = 'javadoc'
-  from javadoc.destinationDir
-}
+// task javadocJar(type: Jar, dependsOn: javadoc) {
+// classifier = 'javadoc'
+// from javadoc.destinationDir
+// }
 
 artifacts {
-  archives javadocJar
+  // archives javadocJar
   archives sourcesJar
 }
 
@@ -52,9 +52,9 @@ bintray {
     version {
       desc = libraryDescription
       gpg {
-        sign = true //Determines whether to GPG sign the files. The default is false
+        sign = true // Determines whether to GPG sign the files. The default is false
         passphrase = properties.getProperty("bintray.gpg.password")
-        //Optional. The passphrase for GPG signing'
+        // Optional. The passphrase for GPG signing'
       }
     }
   }

@@ -38,7 +38,7 @@ public interface IElement extends Parcelable {
   /**
    * 设置结点名称
    *
-   * @param name
+   * @param name 结点名称
    */
   void setName(String name);
 
@@ -59,7 +59,7 @@ public interface IElement extends Parcelable {
   /**
    * 设置结点ID
    *
-   * @param id
+   * @param id 结点 ID
    */
   void setId(String id);
 
@@ -73,28 +73,28 @@ public interface IElement extends Parcelable {
   /**
    * 设置结点父结点的ID
    *
-   * @param parentId
+   * @param parentId 父结点 ID
    */
   void setParentId(String parentId);
 
   /**
    * 设置当前结点孩子
    *
-   * @param children
+   * @param children 孩子结点
    */
   void setChildren(List<Element> children);
 
   /**
    * 为当前结点增加一个孩子结点
    *
-   * @param child
+   * @param child 孩子结点
    */
   void addChild(Element child);
 
   /**
    * 为当前结点增加多个孩子结点
    *
-   * @param children
+   * @param children 孩子结点
    */
   void addChildren(List<Element> children);
 
@@ -122,14 +122,14 @@ public interface IElement extends Parcelable {
   /**
    * 遍历孩子结点，不包括孩子的孩子
    *
-   * @param listener
+   * @param listener 监听器
    */
   void accessChildren(TraverseChildrenListener listener);
 
   /**
    * 递归遍历孩子结点，包括孩子的孩子
    *
-   * @param listener
+   * @param listener 监听器
    */
   void accessChildrenRecursively(TraverseChildrenListener listener);
 
@@ -164,7 +164,7 @@ public interface IElement extends Parcelable {
   /**
    * 设置当前结点的优先级
    *
-   * @param priority
+   * @param priority 优先级
    */
   void setPriority(int priority);
 

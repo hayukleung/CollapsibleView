@@ -7,7 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 多级列表结点 </br> 类型： </br> TYPE_ORG 组织 可以拥有孩子结点 </br> TYPE_USR 人员 不可以拥有孩子结点 </br>
+ * 多级列表结点
+ * 类型：
+ * TYPE_ORG 组织 可以拥有孩子结点
+ * TYPE_USR 人员 不可以拥有孩子结点
  *
  * @author HayukLeung
  */
@@ -78,9 +81,9 @@ public class Element implements IElement, Comparable<IElement> {
   /**
    * 构造函数
    *
-   * @param id
-   * @param name
-   * @param isOrg
+   * @param id 结点 ID
+   * @param name 结点名称
+   * @param isOrg 是否是父结点
    */
   public Element(String id, String name, boolean isOrg) {
     if (TextUtils.isEmpty(id)) {
@@ -223,7 +226,7 @@ public class Element implements IElement, Comparable<IElement> {
   /**
    * 遍历孩子结点，不包括孩子的孩子
    *
-   * @param listener
+   * @param listener 监听器
    */
   private void accessChildrenPrivate(TraverseChildrenListener listener) {
     if (null == listener) {
@@ -264,7 +267,7 @@ public class Element implements IElement, Comparable<IElement> {
   /**
    * 递归遍历孩子结点，包括孩子的孩子
    *
-   * @param listener
+   * @param listener 监听器
    */
   private void accessChildrenRecursivelyPrivate(TraverseChildrenListener listener) {
     if (null == listener) {

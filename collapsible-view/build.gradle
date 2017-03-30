@@ -4,9 +4,9 @@ ext {
   bintrayRepo = 'maven'
   bintrayName = 'CollapsibleView'
 
-  publishedGroupId = 'com.hayukleung.collapsibleview'
+  publishedGroupId = 'com.github.hayukleung'
   libraryName = 'CollapsibleView'
-  artifact = 'CollapsibleView'
+  artifact = 'collapsible-view'
 
   libraryDescription = 'An Android Collapsible View Base On RecyclerView.'
 
@@ -23,9 +23,6 @@ ext {
   licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
   allLicenses = ["Apache-2.0"]
 }
-
-// apply from 'https://github.com/hayukleung/CollapsibleView/blob/master/library/maven.gradle'
-// apply from 'https://github.com/hayukleung/CollapsibleView/blob/master/library/bintray.gradle'
 
 android {
   compileSdkVersion 25
@@ -55,3 +52,6 @@ dependencies {
   compile 'com.android.support:appcompat-v7:25.3.0'
   compile 'com.android.support:recyclerview-v7:25.3.0'
 }
+
+apply from: rootProject.getRootDir().getAbsolutePath() + "/maven.gradle"
+apply from: rootProject.getRootDir().getAbsolutePath() + "/bintray.gradle"
