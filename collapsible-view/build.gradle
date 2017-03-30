@@ -13,7 +13,7 @@ ext {
   siteUrl = 'https://github.com/hayukleung/CollapsibleView'
   gitUrl = 'https://github.com/hayukleung/CollapsibleView.git'
 
-  libraryVersion = '1.0.0'
+  libraryVersion = '1.0.1'
 
   developerId = 'hayukleung'
   developerName = 'Hayuk Leung'
