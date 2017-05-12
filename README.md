@@ -43,7 +43,7 @@ A Collapsible View Base on RecyclerView.
 <dependency>
   <groupId>com.github.hayukleung</groupId>
   <artifactId>collapsible-view</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```
@@ -57,12 +57,12 @@ repositories {
 }
 ```
 ```
-compile 'com.github.hayukleung:collapsible-view:1.0.0'
+compile 'com.github.hayukleung:collapsible-view:1.0.1'
 ```
 
 ### ivy
 ```
-<dependency org='com.github.hayukleung' name='collapsible-view' rev='1.0.0'>
+<dependency org='com.github.hayukleung' name='collapsible-view' rev='1.0.1'>
   <artifact name='collapsible-view' ext='pom' ></artifact>
 </dependency>
 ```
