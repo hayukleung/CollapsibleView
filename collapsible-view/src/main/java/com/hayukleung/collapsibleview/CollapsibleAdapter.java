@@ -146,12 +146,10 @@ public class CollapsibleAdapter extends CollapsibleAbstractAdapter<Element, Coll
   public void onBindViewHolder(CollapsibleViewHolder holder, int position, List<Object> payloads) {
 
     if (null != payloads && 0 < payloads.size()) {
-      mVisibleElements.get(holder.getAdapterPosition())
-          .setName(((Bundle) payloads.get(0)).getString("name"));
-      if (1 < payloads.size()) {
-        mVisibleElements.get(holder.getAdapterPosition())
-            .setExpanded(((Bundle) payloads.get(1)).getBoolean("expanded"));
-      }
+      Element element = mVisibleElements.get(holder.getAdapterPosition());
+      Bundle bundle = (Bundle) payloads.get(0);
+      element.setName(bundle.getString("name"));
+      element.setExpanded(bundle.getBoolean("expanded"));
     }
     onBindViewHolder(holder, position);
   }
